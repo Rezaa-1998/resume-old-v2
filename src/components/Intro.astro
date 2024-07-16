@@ -1,0 +1,50 @@
+---
+const socialMedia = [
+  {
+    title: "Linkedin",
+    link: "https://www.linkedin.com/in/reza-gholami-652abb1a1/",
+    label: "linkedin.com/in/reza-gholami",
+    icon: "/resume-old-v2/icons/logo-linkedin.svg",
+  },
+  {
+    title: "Github",
+    link: "https://github.com/Rezaa-1998",
+    label: "github.com/Rezaa-1998",
+    icon: "/resume-old-v2/icons/logo-github.svg",
+  },
+  {
+    title: "Email",
+    link: "mailto:rezaa.gholamiii1998@gmail.com",
+    label: "rezaa.gholamiii1998@gmail.com",
+    icon: "/resume-old-v2/icons/at-circle.svg",
+  },
+  {
+    title: "Phone Number",
+    link: "tel:+98-993-469-7118",
+    label: "0993 469 7118",
+    icon: "/resume-old-v2/icons/call.svg",
+  },
+];
+---
+
+<section id="intro" class="flex flex-col gap-2 pb-2">
+  <h1 class="font-serif text-xl font-bold tracking-wide">Reza Gholami</h1>
+  <p class="text-lg">Frontend Developer</p>
+  <ul class="grid grid-cols-2 gap-2">
+    {
+      socialMedia.map((social) => (
+        <li class="flex items-center gap-1">
+          <img src={social.icon} alt={social.title} class="size-4" />
+          <a
+            href={social.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-blue-600 underline underline-offset-2"
+          >
+            {social.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

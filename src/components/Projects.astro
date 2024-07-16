@@ -1,0 +1,36 @@
+---
+import Section from "./ui/Section.astro";
+
+const projects = [
+  {
+    projectName: "A Landing Page for a Startups",
+    description: "A web-page to showcase my skills as a web developer.",
+    link: "https://hessamcheraghi.github.io/landing-page-v1/",
+  },
+];
+---
+
+<Section title="open source projects">
+  <div class="flex flex-col gap-2">
+    {
+      projects.map((p) => (
+        <div class="flex flex-col gap-1">
+          <a
+            class="inline-flex items-center gap-1 text-blue-500 underline underline-offset-2"
+            href={p.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="font-bold">{p.projectName}</span>
+            <img
+              src="/resume-old-v2/icons/open-in-new-tab.svg"
+              alt="open in new tab"
+              class="size-2"
+            />
+          </a>
+          <p class="text-sm">{p.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</Section>
