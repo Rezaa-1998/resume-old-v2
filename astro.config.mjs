@@ -3,7 +3,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://hessamcheraghi.github.io",
+  site: "https://Rezaa-1998.github.io",
   base: "resume-old-v2",
   integrations: [tailwind()],
   devToolbar: {
